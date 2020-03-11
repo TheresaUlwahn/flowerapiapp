@@ -1,0 +1,7 @@
+{
+  "name": "flower-api-app-parent",
+  "version": "1.0.0",
+  "scripts": {
+    "postinstall": "npm install --prefix backend"
+  }
+}
