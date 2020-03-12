@@ -1,0 +1,58 @@
+body {
+    margin: 0px;
+    background-color:yellow;
+}
+
+h1 {
+    padding: 0px;
+    margin: 0px;
+    color: white;
+    font-size: 3vw;
+}
+
+p {
+    color: black;
+    font-size: 2vw;
+}
+
+.flowerPoster {
+    background-color: white;
+    position: relative; 
+    width: 25%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flowerPoster img {
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.titleRelease {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    padding: 20px;
+    opacity: 0; /* equals display:none and works with opacity:1 */
+    color: white; 
+    z-index: 2;
+}
+
+/********* HOVER **********/
+
+.flowerPoster:hover img {
+    filter: brightness(20%);
+    background: rgba(0,0,0,.5);
+}
+
+/* when text has display:none above, display:block, shows it on hover*/
+.flowerPoster:hover .titleRelease {
+    display: block;
+    cursor: pointer;
+    opacity: 1;
+  
+}
+

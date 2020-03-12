@@ -1,0 +1,477 @@
+[
+    {
+      "__v": {
+        "numberInt": "0"
+      },
+      "_id": {
+        "oid": "5e57880c9fa50a095f475c18"
+      },
+      "blooming_season": "Spring",
+      "common_name": "Bluebell",
+      "cover_image": "https://images.unsplash.com/photo-1509719662282-b82bed65a96b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3750&q=80",
+      "depth": {
+        "numberInt": "3"
+      },
+      "height": [
+        {
+          "numberInt": "8"
+        },
+        {
+          "numberInt": "20"
+        }
+      ],
+      "latin_name": "Hyacinthoides",
+      "notes": "Excellent for borders and rock gardens",
+      "soil": [
+        "well drained",
+        "fertile"
+      ],
+      "spacing": {
+        "numberInt": "4"
+      },
+      "sun": true
+    },
+    {
+      "__v": {
+        "numberInt": "0"
+      },
+      "_id": {
+        "oid": "5e579cdfe99bdd0ca1cf64a3"
+      },
+      "blooming_season": "Spring",
+      "common_name": "Christmas rose",
+      "cover_image": "https://images.unsplash.com/photo-1512056495345-913a0c261dc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3750&q=80",
+      "depth": {
+        "numberInt": "1"
+      },
+      "height": [
+        {
+          "numberInt": "12"
+        }
+      ],
+      "latin_name": "Helleborus",
+      "notes": "Requires shelter from strong, cold winds",
+      "soil": [
+        "neutral-alkaline"
+      ],
+      "spacing": {
+        "numberInt": "18"
+      },
+      "sun": true
+    },
+    {
+      "__v": {
+        "numberInt": "0"
+      },
+      "_id": {
+        "oid": "5e579dfcb664120cd14b4331"
+      },
+      "blooming_season": "Early Spring",
+      "common_name": "Crocus",
+      "cover_image": "https://images.unsplash.com/photo-1488979246948-f4b573b1fae8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3750&q=80",
+      "depth": {
+        "numberInt": "3"
+      },
+      "height": [
+        {
+          "numberInt": "5"
+        }
+      ],
+      "latin_name": "Crocus",
+      "notes": "Naturalizes well in grass",
+      "soil": [
+        "well drained",
+        "moist",
+        "fertile"
+      ],
+      "spacing": {
+        "numberInt": "4"
+      },
+      "sun": false
+    },
+    {
+      "__v": {
+        "numberInt": "0"
+      },
+      "_id": {
+        "oid": "5e579e50e55eb40ce37807dd"
+      },
+      "blooming_season": "Early Spring",
+      "common_name": "Daffodil",
+      "cover_image": "https://images.unsplash.com/photo-1494951185478-6dce8e7a1520?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3750&q=80",
+      "depth": {
+        "numberInt": "6"
+      },
+      "height": [
+        {
+          "numberInt": "14"
+        },
+        {
+          "numberInt": "24"
+        }
+      ],
+      "latin_name": "Narcissus",
+      "notes": "Plant under shrubs or in a border",
+      "soil": [
+        "well drained",
+        "moist",
+        "fertile"
+      ],
+      "spacing": {
+        "numberInt": "6"
+      },
+      "sun": true
+    },
+    {
+      "__v": {
+        "numberInt": "0"
+      },
+      "_id": {
+        "oid": "5e579ec8b4c20c0d00356457"
+      },
+      "blooming_season": "Mid Spring",
+      "common_name": "Fritillary",
+      "cover_image": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Fritillaria_meleagris_-_kock%C3%A1s_kotuliliom.jpg",
+      "depth": {
+        "numberInt": "3"
+      },
+      "height": [
+        {
+          "numberInt": "6"
+        },
+        {
+          "numberInt": "30"
+        }
+      ],
+      "latin_name": "Fritillaria",
+      "notes": "Different species can be planted in rock gardens, woodland gardens, or borders",
+      "soil": [
+        "well drained",
+        "sandy"
+      ],
+      "spacing": {
+        "numberInt": "3"
+      },
+      "sun": false
+    },
+    {
+      "__v": {
+        "numberInt": "0"
+      },
+      "_id": {
+        "oid": "5e579f1ccaa0040d149681d1"
+      },
+      "blooming_season": "Spring",
+      "common_name": "Glory of the snow",
+      "cover_image": "https://images.unsplash.com/photo-1554735572-d2afdc479bd6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3747&q=80",
+      "depth": {
+        "numberInt": "3"
+      },
+      "height": [
+        {
+          "numberInt": "4"
+        },
+        {
+          "numberInt": "10"
+        }
+      ],
+      "latin_name": "Chionodoxa",
+      "notes": "Plant in rock gardens, raised beds or under shrubs",
+      "soil": [
+        "well drained",
+        "moist"
+      ],
+      "spacing": {
+        "numberInt": "3"
+      },
+      "sun": false
+    },
+    {
+      "__v": {
+        "numberInt": "0"
+      },
+      "_id": {
+        "oid": "5e579fce9c9bcc0d3b27a0ab"
+      },
+      "blooming_season": "Early Spring",
+      "common_name": "Grape hyacinth",
+      "cover_image": "https://images.unsplash.com/photo-1555045381-0b7e8d36623b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3775&q=80",
+      "depth": {
+        "numberInt": "2"
+      },
+      "height": [
+        {
+          "numberInt": "6"
+        },
+        {
+          "numberInt": "12"
+        }
+      ],
+      "latin_name": "Muscari",
+      "notes": "Use as a border plant or in wildflower and rock gardens; self-sows easily",
+      "soil": [
+        "well drained",
+        "moist",
+        "fertile"
+      ],
+      "spacing": {
+        "numberInt": "3"
+      },
+      "sun": true
+    },
+    {
+      "__v": {
+        "numberInt": "0"
+      },
+      "_id": {
+        "oid": "5e57a03a90d7930d501e9c3e"
+      },
+      "blooming_season": "Early Summer",
+      "common_name": "Bearded Iris",
+      "cover_image": "https://images.unsplash.com/photo-1552897418-812c61bdd220?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3750&q=80",
+      "depth": {
+        "numberInt": "4"
+      },
+      "height": [
+        {
+          "numberInt": "3"
+        },
+        {
+          "numberInt": "48"
+        }
+      ],
+      "latin_name": "Iris",
+      "notes": "Naturalises well; good cut flower",
+      "soil": [
+        "well drained"
+      ],
+      "spacing": {
+        "numberInt": "4"
+      },
+      "sun": true
+    },
+    {
+      "__v": {
+        "numberInt": "0"
+      },
+      "_id": {
+        "oid": "5e57a0777227950d5b1e5e72"
+      },
+      "blooming_season": "Mid Summer",
+      "common_name": "Siberian Iris",
+      "cover_image": "https://images.unsplash.com/photo-1568719284247-70e91bb55586?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2880&q=80",
+      "depth": {
+        "numberInt": "4"
+      },
+      "height": [
+        {
+          "numberInt": "18"
+        },
+        {
+          "numberInt": "48"
+        }
+      ],
+      "latin_name": "Iris",
+      "notes": "An excellent cut flower",
+      "soil": [
+        "well drained"
+      ],
+      "spacing": {
+        "numberInt": "4"
+      },
+      "sun": true
+    },
+    {
+      "__v": {
+        "numberInt": "0"
+      },
+      "_id": {
+        "oid": "5e57a0e1e5f2470d789335c2"
+      },
+      "blooming_season": "Late Spring",
+      "common_name": "Ornamental onion",
+      "cover_image": "https://images.unsplash.com/photo-1565685225009-fc85d9109c80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+      "depth": {
+        "numberInt": "3"
+      },
+      "height": [
+        {
+          "numberInt": "6"
+        },
+        {
+          "numberInt": "60"
+        }
+      ],
+      "latin_name": "Allium",
+      "notes": "Usually pest-free; a great cut flower",
+      "soil": [
+        "well drained",
+        "moist",
+        "fertile"
+      ],
+      "spacing": {
+        "numberInt": "12"
+      },
+      "sun": true
+    },
+    {
+      "__v": {
+        "numberInt": "0"
+      },
+      "_id": {
+        "oid": "5e57a13e631c460d8c567507"
+      },
+      "blooming_season": "Spring",
+      "common_name": "Snowdrop",
+      "cover_image": "https://images.unsplash.com/photo-1510507248450-c55fd535c205?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3750&q=80",
+      "depth": {
+        "numberInt": "3"
+      },
+      "height": [
+        {
+          "numberInt": "6"
+        },
+        {
+          "numberInt": "12"
+        }
+      ],
+      "latin_name": "Galanthus",
+      "notes": "Best when clustered and planted in an area that will not dry our in summer",
+      "soil": [
+        "well drained",
+        "moist",
+        "fertile"
+      ],
+      "spacing": {
+        "numberInt": "3"
+      },
+      "sun": false
+    },
+    {
+      "__v": {
+        "numberInt": "0"
+      },
+      "_id": {
+        "oid": "5e57a19a0f894c0d9fbd86ae"
+      },
+      "blooming_season": "Spring",
+      "common_name": "Snowflake",
+      "cover_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Hairy-Footed_Flower_Bee_%28Anthophora_plumipes%29_on_Spring_Snowflake_%28Leucojum_vernum%29.JPG/2880px-Hairy-Footed_Flower_Bee_%28Anthophora_plumipes%29_on_Spring_Snowflake_%28Leucojum_vernum%29.JPG",
+      "depth": {
+        "numberInt": "4"
+      },
+      "height": [
+        {
+          "numberInt": "6"
+        },
+        {
+          "numberInt": "18"
+        }
+      ],
+      "latin_name": "Leucojum",
+      "notes": "Naturalizes well",
+      "soil": [
+        "well drained",
+        "moist",
+        "sandy"
+      ],
+      "spacing": {
+        "numberInt": "4"
+      },
+      "sun": true
+    },
+    {
+      "__v": {
+        "numberInt": "0"
+      },
+      "_id": {
+        "oid": "5e57a1e634a8fa0db4c328f9"
+      },
+      "blooming_season": "Spring",
+      "common_name": "Spring starflower",
+      "cover_image": "https://images.unsplash.com/photo-1549483920-405990cc2ca5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3667&q=80",
+      "depth": {
+        "numberInt": "3"
+      },
+      "height": [
+        {
+          "numberInt": "4"
+        },
+        {
+          "numberInt": "6"
+        }
+      ],
+      "latin_name": "Ipheion uniflorum",
+      "notes": "Fragrant, naturalises easily",
+      "soil": [
+        "well drained"
+      ],
+      "spacing": {
+        "numberInt": "6"
+      },
+      "sun": false
+    },
+    {
+      "__v": {
+        "numberInt": "0"
+      },
+      "_id": {
+        "oid": "5e57a23d5820060dcbb67c60"
+      },
+      "blooming_season": "Early Summer",
+      "common_name": "Star of Bethlehem",
+      "cover_image": "",
+      "depth": {
+        "numberInt": "4"
+      },
+      "height": [
+        {
+          "numberInt": "6"
+        },
+        {
+          "numberInt": "24"
+        }
+      ],
+      "latin_name": "Ornithogalum",
+      "notes": "Plant in spring, lift in fall",
+      "soil": [
+        "well drained"
+      ],
+      "spacing": {
+        "numberInt": "2"
+      },
+      "sun": true
+    },
+    {
+      "__v": {
+        "numberInt": "0"
+      },
+      "_id": {
+        "oid": "5e57a2cbee17690debd0873b"
+      },
+      "blooming_season": "Late Spring",
+      "common_name": "Tulip",
+      "cover_image": "https://images.unsplash.com/photo-1522482999650-be954a7c0392?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2201&q=80",
+      "depth": {
+        "numberInt": "5"
+      },
+      "height": [
+        {
+          "numberInt": "8"
+        },
+        {
+          "numberInt": "30"
+        }
+      ],
+      "latin_name": "Tulipas",
+      "notes": "Excellent for borders, rock gardens, and naturalising",
+      "soil": [
+        "well drained",
+        "fertile"
+      ],
+      "spacing": {
+        "numberInt": "5"
+      },
+      "sun": true
+    }
+  ]
