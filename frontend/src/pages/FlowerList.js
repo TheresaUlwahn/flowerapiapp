@@ -12,31 +12,37 @@ useEffect(() => {
   // fetch('https://api.themoviedb.org/3/movie/popular?api_key=3812b9925d12c2723ac148f3607b8bb5&language=en-US&page=1')
     .then((res) => res.json())
     .then((json) => {
-      setFlowers(json.flowers)
-      console.log(json)
+      setFlowers(json)
+      // console.log(json)
     })
 }, [])
+// console.log(flowers)
 
 // function goBack() {
 //     window.history.back();
 //   }  
-
+// const fl = flowers
+// console.log(fl[0].blooming_season)
   return (
-      
+  
     <div className="flowerContainer">
-      {/* {flowers.map((flower) => (
-        <div className="flowerPoster" key={flowers._id}> 
-          {/* <Link to={`/flowers/${flower._id}`}> */}
-            {/* <div className="titleRelease">
-              <h1>{flowers.common_name}</h1> */}
-              {/* <p>Released {flowers.release_date}</p> */}
-            {/* </div>
-            <div> */}
-              {/* <img src={`https://image.tmdb.org/t/p/w342${flower.poster_path}`} alt={flower.latin_name} />   */}
-            {/* </div> */}
-          {/* </Link> */}
-        {/* </div>
-      ))}  */} 
+      
+      <p>Blooming season {flowers.length}</p>     
+              
+      {flowers.map((flower) => (
+        <div className="flowerPoster" key={flower._id.oid}> 
+        {/* alert({flower._id.oid}) */}
+          <Link to={`/flowers/${flower._id.oid}`}>
+            <div className="titleRelease">
+             <p>{flower.common_name}</p>
+              <p>Blooming season {flower.blooming_season}</p>
+            </div>
+            <div>
+              <img src={flower.cover_image} alt={flower.latin_name} />  
+            </div>
+          </Link>
+        </div>
+      ))}  
     </div>
   )
 }

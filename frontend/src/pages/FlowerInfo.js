@@ -8,7 +8,9 @@ export const FlowerInfo = () => {
   const [ flower, setFlower ] = useState ([])
 
   useEffect(() => {
-  fetch(`https://api.themoviedb.org/3/movie/${flowerId}?api_key=3812b9925d12c2723ac148f3607b8bb5&language=en-US`)
+
+  // fetch(`https://api.themoviedb.org/3/movie/${flowerId}?api_key=3812b9925d12c2723ac148f3607b8bb5&language=en-US`)
+  fetch(`https://flowers-mock-data.firebaseio.com/flowers/0.json`)
   .then((res) => res.json())
   .then((json) => {
     setFlower(json)
@@ -30,16 +32,16 @@ export const FlowerInfo = () => {
         <p>Movies</p>
       </Link>
       {/*backDrop background picture with CSS style in react for the site*/}
-      < div className="backDrop" style={{backgroundImage: `url(https://image.tmdb.org/t/p/w1280${flower.backdrop_path})`}} alt={flower.original_title} />
+      < div className="backDrop" style={{backgroundImage: `url(${flower.cover_image})`}} alt={flower.latin_name} />
         {/*infoBox contains poster, text about movie, title and rating*/}
       <div className="infoBox">    
-        <img className="infoPoster" src={`https://image.tmdb.org/t/p/w342${flower.poster_path}`} alt={flower.original_title} /> 
+        {/* <img className="infoPoster" src={`https://image.tmdb.org/t/p/w342${flower.poster_path}`} alt={flower.latin_name} />  */}
         {/*titleInfo contains title and rating to make them flex in css*/} 
         <div className="titleInfo">   
-          <h1 className="flowerTitle">{flower.original_title}
-              <p className="flowerVotes">{flower.vote_average}/10</p>
+          <h1 className="flowerTitle">{flower.common_name}
+              <p className="flowerVotes">{flower.notes}/10</p>
           </h1>
-          <p>{flower.overview}</p>
+          <p>{flower.blooming_season}</p>
         </div>  
       </div>
     </section> 

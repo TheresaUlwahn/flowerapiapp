@@ -18,8 +18,6 @@ export const App = () => {
   })
 }, [flowers])
  
- 
-
   // const handleFormSubmit = message => {
   //   fetch(url, {
   //     method: "POST",
@@ -31,7 +29,6 @@ export const App = () => {
   //     .then(() => setPostedReflection(message))
   //     .catch(err => console.log("error:", err))
   // }
-
 
   return (
     <BrowserRouter>

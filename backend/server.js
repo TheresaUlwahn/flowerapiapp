@@ -24,26 +24,6 @@ const addFlowersToDatabase = () => {
   })
  addFlowersToDatabase()
 }
-
-
-// if (process.env.RESET_DATABASE) {
-//   console.log('Resetting database!')
-
-//   const seedDatabase = async () => {
-//     await Flower.deleteMany({})
-
-//     flowersData.forEach(async (flowersData) => {
-//       const flower = await new Flower(flowersData).save()
-//       // new Box({ ...flowersData, flower }).save()
-//     })
-//   }
-
-//   seedDatabase()
-// }
-
-// Defines the port the app will run on. Defaults to 8080, but can be 
-// overridden when starting the server. For example:
-//
 //   PORT=9000 npm start
 const port = process.env.PORT || 8080
 const app = express()
