@@ -9,20 +9,17 @@ export const FlowerList = () => {
 
 useEffect(() => {
   fetch(url)
-  // fetch('https://api.themoviedb.org/3/movie/popular?api_key=3812b9925d12c2723ac148f3607b8bb5&language=en-US&page=1')
     .then((res) => res.json())
     .then((json) => {
+      // json[i]._id.oid = counter(++)
       setFlowers(json)
       // console.log(json)
     })
 }, [])
 // console.log(flowers)
-
-// function goBack() {
-//     window.history.back();
-//   }  
 // const fl = flowers
 // console.log(fl[0].blooming_season)
+
   return (
   
     <div className="flowerContainer">
