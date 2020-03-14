@@ -13,7 +13,7 @@ export const FlowerInfo = () => {
   useEffect(() => {
 
   // fetch(`https://api.themoviedb.org/3/movie/${flowerId}?api_key=3812b9925d12c2723ac148f3607b8bb5&language=en-US`)
-  fetch(`https://flowers-mock-data.firebaseio.com/flowers/0/.json`)
+    fetch(`https://flowers-mock-data.firebaseio.com/flowers/${flowerId}/.json`)
   .then((res) => res.json())
   .then((json) => {
     setFlower(json)
