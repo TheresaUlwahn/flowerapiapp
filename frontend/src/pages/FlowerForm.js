@@ -3,12 +3,12 @@ import React, { useState } from "react"
 import "./flowerform.css"
 
 export const FlowerForm = props => {
-  const [message, setMessage] = useState("")
+  const [flowerMessage, setFlowerMessage] = useState("")
 
   const handleSubmit = event => {
     event.preventDefault()
-    props.onFormSubmit(message) // this onFormSubmit comes as a props from App.js
-    setMessage("")
+    props.onFormSubmit(flowerMessage) // this onFormSubmit comes as a props from App.js
+    setFlowerMessage("")
   }
 
   return (
@@ -16,14 +16,14 @@ export const FlowerForm = props => {
       <h3>Message to ?</h3>
       <textarea
         rows='3'
-        onChange={event => setMessage(event.target.value)}
+        onChange={event => setFlowerMessage(event.target.value)}
       ></textarea>
       <div className='form-footer'>
         <button 
           className='flower-button'
           type='submit'
           onClick={handleSubmit}
-          disabled={message.length < 6 || message.length > 140 ? true : false}
+          disabled={flowerMessage.length < 6 || flowerMessage.length > 140 ? true : false}
         >
           <span role='img' aria-label='Heart' >
             {"🌸"}
@@ -33,7 +33,7 @@ export const FlowerForm = props => {
             {"🌸"}
           </span>
         </button>
-        <p>{message.length} / 140</p>
+        <p>{flowerMessage.length} / 140</p>
       </div>
     </form>
   )

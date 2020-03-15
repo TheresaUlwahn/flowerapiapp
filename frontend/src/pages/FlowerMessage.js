@@ -3,11 +3,11 @@ import moment from "moment" // this is to format the date
 import './flowermessage.css'
 
 export const FlowerMessage = props => {
-  const { message, hearts, createdAt, _id } = props.thought
+  const { message, hearts, createdAt, _id } = props.flowerMessage
   
 const handleClick = () => {
   console.log ("clicking!", _id)
-  fetch (`https:/localhost:8080/${_id}/like`, {
+  fetch (`https://flowers-mock-data.firebaseio.com.json/like`, {
     method: "POST",
     body: "",
     headers: {"Content-Type": "application/json"}
@@ -17,6 +17,7 @@ const handleClick = () => {
   return (
     <article className='flower-message'>
       <h3>{message}</h3>
+      console.log({message})
       <p>
       <button 
         className='flower-heart' 
@@ -24,7 +25,6 @@ const handleClick = () => {
           <span role='img' aria-label='Heart' >
             {"❤️ "}
           </span>
-        
       </button>     
         x {hearts}
       </p>

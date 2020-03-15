@@ -5,29 +5,19 @@ import { FlowerInfo } from './pages/FlowerInfo'
 import { FlowerForm } from './pages/FlowerForm'
 import { FlowerMessage } from './pages/FlowerMessage'
 
-const url = "http://localhost:8080/"
+const url = "https://flowers-mock-data.firebaseio.com.json"
+// const url = "hhttps://flowers-mock-data.firebaseio.com/comments/{YOUR GITHUB USERNAME}/{flowerId}.json"
 
 export const App = () => {
-  const [flowers, setFlowers] = useState([])
-  // const [postedReflection, setPostedReflection] = useState("")
-
-  useEffect(() => {
-    fetch(url)
-      .then(res => res.json())
-      .then(json => {
-        setFlowers(json.flowers)
-        console.log(flowers)
-  })
-}, [flowers])
-
-const [messages, setMessages] = useState([])
+  const [flowerMessages, setFlowerMessages] = useState([])
   const [postedMessage, setPostedMessage] = useState("")
 
   useEffect(() => {
     fetch(url)
       .then(res => res.json())
-      .then(json => setMessages(json))
+      .then(json => setFlowerMessages(json))
   }, [postedMessage])
+    console.log("hello", flowerMessages)
 
   const handleFormSubmit = message => {
     fetch(url, {
@@ -39,15 +29,15 @@ const [messages, setMessages] = useState([])
       .catch(err => console.log("error:", err))
   }
 
-  const onLiked = (messageId) => {
-    console.log ("Logging in the App.js", messageId)
-    const updatedMessages = messages.map(message => {
-      if (message._id === messageId) {
-        message.hearts += 1
+  const onLiked = (flowerMessageId) => {
+    console.log ("Logging in the App.js", flowerMessageId)
+    const updatedFlowerMessages = flowerMessages.map(flowerMessage => {
+      if (flowerMessage._id === flowerMessageId) {
+        flowerMessage.hearts += 1
       }
-      return message
+      return flowerMessage
     })
-    setMessages(updatedMessages)
+    setFlowerMessages(updatedFlowerMessages)
   }
 
   return (
@@ -59,11 +49,11 @@ const [messages, setMessages] = useState([])
         <Route path="/flowers/:flowerId">
           <FlowerInfo />
           <FlowerForm className="infoPoster" onFormSubmit={handleFormSubmit} /> 
-      {messages.map(message => (
-        <FlowerMessage key={message._id} message={message} onLiked={onLiked} />  
-      ))}
+          {flowerMessages.map(flowerMessage => (
+            <FlowerMessage key={flowerMessage._id} flowerMessage={flowerMessage} onLiked={onLiked} />  
+          ))}
         </Route>
       </Switch>
     </BrowserRouter>
-  )
-}
+    )
+  }
