@@ -2,14 +2,16 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import "./flowerinfo.css"
-// import { FlowerForm } from '../components/FlowerForm'
-// import { FlowerMessage } from '../components/FlowerMessage'
+import { FlowerForm } from './FlowerForm'
+import { FlowerMessage } from './FlowerMessage'
 
+const url = "https://flowers-mock-data.firebaseio.com/comments/TheresaUlwahn"
 
 export const FlowerInfo = () => {
   const { flowerId } = useParams()
   const [flower, setFlower] = useState([])
   const [flowerMessages, setFlowerMessages] = useState([])
+  const [postedMessage, setPostedMessage] = useState("")
 
   useEffect(() => {
     fetch(`https://flowers-mock-data.firebaseio.com/flowers/${flowerId}.json`)
@@ -24,13 +26,45 @@ export const FlowerInfo = () => {
       .then((res) => res.json())
       .then((json) => {
         console.log('ALLA MEDDELANDEN FÖR BLOMMAN: ', json)
-        //setFlowerMessages(json)
+        if (json !== null) {
+          setFlowerMessages(json)
+        }
       })
-  }, [flowerMessages])
+  }, [postedMessage])
+
+  const handleFormSubmit = (flowerId, message) => {
+    console.log('POSTA DET HÄR MEDDELANDET: ', message, 'FÖR BLOMMA: ', flowerId);
+
+    fetch(url + `/${flowerId}/.json`, {
+      method: "POST",
+      body: JSON.stringify({ message }),
+      headers: { "Content-Type": "application/json" }
+    })
+      .then(() => {
+        console.log('postat!')
+        window.location.reload();
+      })
+      .catch(err => console.log("error:", err))
+  }
+
+  const onLiked = (flowerMessageId) => {
+    console.log("Logging in the App.js", flowerMessageId)
+    const updatedFlowerMessages = result.map(flowerMessage => {
+      if (flowerMessage[0] === flowerMessageId) {
+        flowerMessage.hearts += 1
+      }
+      return flowerMessage
+    })
+    setFlowerMessages(updatedFlowerMessages)
+  }
 
   if (!flower) {
     return <div>Ups, need a moment...</div>
   }
+
+  var result = Object.keys(flowerMessages).map(function (key) {
+    return [key, flowerMessages[key]];
+  });
 
   // const [messages, setMessages] = useState([])
   // const [postedMessage, setPostedMessage] = useState("")
@@ -64,6 +98,11 @@ export const FlowerInfo = () => {
 
   return (
     <section className="infoContainer">
+
+      <FlowerForm className="infoPoster" onFormSubmit={handleFormSubmit} />
+      {result.map(flowerMessage => (
+        <FlowerMessage key={flowerMessage[0]} flowerMessage={flowerMessage[1]} onLiked={onLiked} />
+      ))}
 
       {/* Link and svg for "Go Back"-button */}
       <Link className="backLink" to={`/`}>
