@@ -1,13 +1,15 @@
- 
+
 import React, { useState } from "react"
+import { useParams } from 'react-router-dom'
 import "./flowerform.css"
 
 export const FlowerForm = props => {
   const [flowerMessage, setFlowerMessage] = useState("")
+  const { flowerId } = useParams()
 
   const handleSubmit = event => {
     event.preventDefault()
-    props.onFormSubmit(flowerMessage) // this onFormSubmit comes as a props from App.js
+    props.onFormSubmit(flowerId, flowerMessage) // this onFormSubmit comes as a props from App.js
     setFlowerMessage("")
   }
 
@@ -19,7 +21,7 @@ export const FlowerForm = props => {
         onChange={event => setFlowerMessage(event.target.value)}
       ></textarea>
       <div className='form-footer'>
-        <button 
+        <button
           className='flower-button'
           type='submit'
           onClick={handleSubmit}
