@@ -3,5 +3,9 @@
   "version": "1.0.0",
   "scripts": {
     "postinstall": "npm install --prefix backend"
+  },
+  "dependencies": {
+    "moment": "^2.24.0",
+    "react-moment": "^0.9.7"
   }
 }

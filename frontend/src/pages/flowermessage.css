@@ -1,34 +1,35 @@
 
 .flower-message {
-    border: 2px solid black;
-    box-shadow: 4px 4px black;
-    width: 300px;
-    height: 130px;
-    margin: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px;
-  }
-  
-  .flower-message h3 {
-    font-family: "Courier", monospace;
-    font-size: 16px;
-    margin: 0;
-    color: #383838;
-  }
-  
-  .flower-message p {
-    border-bottom: 0px;
-    margin: 0px;
-    font-size: 13px;
-    color: #8d8a8a;
-  
-  }
-  
-  .flower-heart {
-    background-color: pink;
-    border-radius: 100px;
-    padding: 10px;
-    border-right: 5px;
+  border: 2px solid #f9dfe6;
+  border-radius: 10px;
+  box-shadow: 4px 4px #f9dfe6;
+  width: 300px;
+  height: 130px;
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.flower-message h3 {
+  font-family: 'Tangerine', cursive;
+  font-size: 25px;
+  margin: 0;
+  color: #fff;
+}
+
+.flower-message p {
+  border-bottom: 0px;
+  margin: 0px;
+  font-size: 13px;
+  color: #fff;
+
+}
+
+.flower-heart {
+  background-color: pink;
+  border-radius: 100px;
+  padding: 10px;
+  border-right: 5px;
   }

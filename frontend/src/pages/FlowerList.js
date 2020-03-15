@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "./flowerlist.css"
+import { Header } from './Header'
 import { Link } from 'react-router-dom'
 
 const url = "https://flowers-mock-data.firebaseio.com/flowers.json"
@@ -22,40 +23,26 @@ export const FlowerList = () => {
       })
   }, [])
 
-
-  // useEffect(() => {
-  //   fetch(url)
-  //     .then((res) => res.json())
-  //     .then((json) => {
-  //       // json[i]._id.oid = counter(++)
-  //       setFlowers(json)
-  //       console.log(json)
-  //     })
-  // }, [])
-  // console.log(flowers)
-  // const fl = flowers
-  // console.log(fl[0].blooming_season)
-
   return (
-
+    <div>
+    <Header />
+   
+    
     <div className="flowerContainer">
-
-      <p>Blooming season {flowers.length}</p>
-
       {flowers.map((flower) => (
         <div className="flowerPoster" key={flower.id}>
-          {/* alert({flower._id.oid}) */}
           <Link to={`/flowers/${flower.id}`}>
             <div className="titleRelease">
-              <p>{flower.common_name}</p>
-              <p>Blooming season {flower.blooming_season}</p>
+              <h1>{flower.common_name}</h1>
+              <p>{flower.latin_name}</p>
             </div>
             <div>
-              <img src={flower.cover_image} alt={flower.latin_name} />
+              <img src={flower.cover_image} alt={flower.common_name} />
             </div>
           </Link>
         </div>
       ))}
+    </div>
     </div>
   )
 }

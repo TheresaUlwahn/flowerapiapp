@@ -1,7 +1,6 @@
-
-import React, { useState } from "react"
+import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
-import "./flowerform.css"
+import './flowerform.css'
 
 export const FlowerForm = props => {
   const [flowerMessage, setFlowerMessage] = useState("")
@@ -9,7 +8,7 @@ export const FlowerForm = props => {
 
   const handleSubmit = event => {
     event.preventDefault()
-    props.onFormSubmit(flowerId, flowerMessage) // this onFormSubmit comes as a props from App.js
+    props.onFormSubmit(flowerId, flowerMessage) // ONFORMSUBMIT COMES AS A PROPS FROM FLOWERINFO.JS
     setFlowerMessage("")
   }
 
@@ -18,15 +17,15 @@ export const FlowerForm = props => {
       <h3>Message to ?</h3>
       <textarea
         rows='3'
-        onChange={event => setFlowerMessage(event.target.value)}
-      ></textarea>
+        onChange={event => setFlowerMessage(event.target.value)}>
+      </textarea>
       <div className='form-footer'>
         <button
           className='flower-button'
           type='submit'
           onClick={handleSubmit}
-          disabled={flowerMessage.length < 6 || flowerMessage.length > 140 ? true : false}
-        >
+          disabled={flowerMessage.length < 6 || flowerMessage.length > 140 ? true : false}>
+          
           <span role='img' aria-label='Heart' >
             {"🌸"}
           </span>
@@ -34,6 +33,7 @@ export const FlowerForm = props => {
           <span role='img' aria-label='Heart' >
             {"🌸"}
           </span>
+
         </button>
         <p>{flowerMessage.length} / 140</p>
       </div>

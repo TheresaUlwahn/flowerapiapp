@@ -1,8 +1,8 @@
 body {
     margin: 0px;
-    background-color:#eeeae4;
-    /* font-family: 'Tangerine', cursive; */
-    font-family: Roboto;
+    /* background-color:#eeeae4; */
+    font-family: 'Tangerine', cursive;
+    /* font-family: Roboto; */
 }
 
 h1 {
@@ -13,11 +13,14 @@ h1 {
 }
 
 p {
-    color: #843c14;
+    color: #fff;
+    font-family: 'Tangerine', cursive;
     font-size: 2vw;
 }
 
+
 .flowerPoster {
+    border: 15px solid #000;
     background-color: white;
     position: relative; 
     width: 25%;

@@ -1,9 +1,9 @@
-import React from "react"
-import moment from "moment" // this is to format the date
+import React from 'react'
+import moment from 'moment' 
 import './flowermessage.css'
 
 export const FlowerMessage = props => {
-  const { message, hearts, createdAt, _id } = props.flowerMessage
+  const { message, createdAt, _id } = props.flowerMessage
   
 const handleClick = () => {
   console.log ("clicking!", _id)
@@ -17,10 +17,7 @@ const handleClick = () => {
   return (
     <article className='flower-message'>
       <h3>{ message }</h3>
-      {/* <h3>({ message })</h3> */}
-      {/* <h3>{FlowerMessage}</h3> */}
-      {/* <h3>{props.flowerMessage[0]}</h3> */}
-      {/* <p>
+      <p>
       <button 
         className='flower-heart' 
         onClick={handleClick}>
@@ -28,8 +25,7 @@ const handleClick = () => {
             {"❤️ "}
           </span>
       </button>     
-        x {hearts}
-      </p> */}
+      </p>
       <p>{moment(createdAt).fromNow()}</p>
     </article>
   )
