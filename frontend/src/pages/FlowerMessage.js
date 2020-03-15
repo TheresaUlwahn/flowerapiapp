@@ -16,9 +16,11 @@ const handleClick = () => {
 
   return (
     <article className='flower-message'>
-      <h3>{message}</h3>
-      console.log({message})
-      <p>
+      <h3>{ message }</h3>
+      {/* <h3>({ message })</h3> */}
+      {/* <h3>{FlowerMessage}</h3> */}
+      {/* <h3>{props.flowerMessage[0]}</h3> */}
+      {/* <p>
       <button 
         className='flower-heart' 
         onClick={handleClick}>
@@ -27,7 +29,7 @@ const handleClick = () => {
           </span>
       </button>     
         x {hearts}
-      </p>
+      </p> */}
       <p>{moment(createdAt).fromNow()}</p>
     </article>
   )

@@ -5,9 +5,8 @@ import { FlowerInfo } from './pages/FlowerInfo'
 import { FlowerForm } from './pages/FlowerForm'
 import { FlowerMessage } from './pages/FlowerMessage'
 
-const url = "https://flowers-mock-data.firebaseio.com.json"
-// const url = "hhttps://flowers-mock-data.firebaseio.com/comments/{YOUR GITHUB USERNAME}/{flowerId}.json"
-
+const url = "https://flowers-mock-data.firebaseio.com/comments/TheresaUlwahn/0/.json"
+ 
 export const App = () => {
   const [flowerMessages, setFlowerMessages] = useState([])
   const [postedMessage, setPostedMessage] = useState("")
@@ -25,20 +24,26 @@ export const App = () => {
       body: JSON.stringify({ message }),
       headers: { "Content-Type": "application/json" }
     })
-      .then(() => setPostedMessage(message))
-      .catch(err => console.log("error:", err))
+      // .then(() => setPostedMessage(message))
+      // .catch(err => console.log("error:", err))
   }
 
   const onLiked = (flowerMessageId) => {
     console.log ("Logging in the App.js", flowerMessageId)
-    const updatedFlowerMessages = flowerMessages.map(flowerMessage => {
-      if (flowerMessage._id === flowerMessageId) {
+    const updatedFlowerMessages = result.map(flowerMessage => {
+      if (flowerMessage[0] === flowerMessageId) {
         flowerMessage.hearts += 1
       }
       return flowerMessage
     })
     setFlowerMessages(updatedFlowerMessages)
   }
+  
+  var result = Object.keys(flowerMessages).map(function(key) {
+    return [key, flowerMessages[key]];
+  });
+  console.log(result)
+  // console.log(message)
 
   return (
     <BrowserRouter>
@@ -49,8 +54,8 @@ export const App = () => {
         <Route path="/flowers/:flowerId">
           <FlowerInfo />
           <FlowerForm className="infoPoster" onFormSubmit={handleFormSubmit} /> 
-          {flowerMessages.map(flowerMessage => (
-            <FlowerMessage key={flowerMessage._id} flowerMessage={flowerMessage} onLiked={onLiked} />  
+          {result.map(flowerMessage => (
+            <FlowerMessage key={flowerMessage[0]} flowerMessage={flowerMessage[1]} onLiked={onLiked} />  
           ))}
         </Route>
       </Switch>

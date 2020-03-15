@@ -11,13 +11,10 @@ export const FlowerInfo = () => {
   const [ flower, setFlower ] = useState ([])
 
   useEffect(() => {
-
-  // fetch(`https://api.themoviedb.org/3/movie/${flowerId}?api_key=3812b9925d12c2723ac148f3607b8bb5&language=en-US`)
     fetch(`https://flowers-mock-data.firebaseio.com/flowers/${flowerId}/.json`)
-  .then((res) => res.json())
-  .then((json) => {
+    .then((res) => res.json())
+    .then((json) => {
     setFlower(json)
-    console.log(json)
   })  
   }, [flowerId])
 
@@ -66,14 +63,13 @@ export const FlowerInfo = () => {
       </Link>
       {/*backDrop background picture with CSS style in react for the site*/}
       < div className="backDrop" style={{backgroundImage: `url(${flower.cover_image})`}} alt={flower.latin_name} />
-        {/*infoBox contains poster, text about movie, title and rating*/}
+        {/*infoBox contains poster and text about the flower*/}
       <div className="infoBox">   
-      {/* <FlowerForm className="infoPoster" onFormSubmit={handleFormSubmit} /> 
+      {/* {/* <FlowerForm className="infoPoster" onFormSubmit={handleFormSubmit} />
       {messages.map(message => (
         <FlowerMessage key={message._id} message={message} onLiked={onLiked} />  
       ))} */}
-        {/* <img className="infoPoster" style={{Image:`url(${flower.cover_image})`}} alt={flower.latin_name} />  */}
-        {/* <img className="infoPoster" src={`"https://images.unsplash.com/?${flower.cover_image}fit=crop&w=375&q=80"`} alt={flower.latin_name} />  */}
+        <img className="infoPoster" src={`"https://flowers-mock-data.firebaseio.com/flowers/${flowerId}/.jsonfit=crop&w=375&q=80"`} alt={flower.latin_name} /> 
         {/* <img className="infoPoster" src={`https://image.tmdb.org/t/p/w342${flower.poster_path}`} alt={flower.latin_name} />  */}
         {/*titleInfo contains title and rating to make them flex in css*/} 
         <div className="titleInfo">   
