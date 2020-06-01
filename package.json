@@ -5,6 +5,7 @@
     "postinstall": "npm install --prefix backend"
   },
   "dependencies": {
+    "acorn": "^7.1.1",
     "moment": "^2.24.0",
     "react-moment": "^0.9.7"
   }
