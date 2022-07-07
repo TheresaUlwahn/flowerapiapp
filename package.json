@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "acorn": "^7.1.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "react": "^16.13.1",
     "react-moment": "^0.9.7",
     "websocket-extensions": "^0.1.4"
